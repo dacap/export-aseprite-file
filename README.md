@@ -3,8 +3,8 @@
 > by David Capello
 
 This is a script that can be used to export the data from a
-`.aseprite` file into a JSON + a collection of PNG files.  This works
-with Aseprite v1.2.25 and support the future v1.3 to export
+`.aseprite` file into a JSON + a collection of PNG files.  This script
+will work with Aseprite v1.2.26 and support the future v1.3 to export
 tilemap/tileset data.
 
 ## Example
