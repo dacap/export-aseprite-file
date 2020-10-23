@@ -37,7 +37,7 @@ An example of `map/sprite.json` content:
   ],
   "layers": [
     {
-      "name": "Group 1",
+      "name": "Group Layer",
       "layers": [
         {
           "name": "Common Layer",
@@ -58,6 +58,7 @@ An example of `map/sprite.json` content:
     },
     {
       "name": "Tilemap Layer",
+      "tileset": 0,
       "cels": [
         {
           "bounds": { "x": 0, "y": 0, "width": 32, "height": 32 },
@@ -103,21 +104,21 @@ An example of `map/sprite.json` content:
   ],
   "tags": [
     {
-      "name": "a",
+      "name": "Tag A",
       "aniDir": "pingpong",
       "color": "#000000",
       "from": 0,
       "to": 2
     },
     {
-      "name": "b",
+      "name": "Tag B",
       "aniDir": "forward",
       "color": "#000000",
       "from": 0,
       "to": 1
     },
     {
-      "name": "c",
+      "name": "Tag C",
       "aniDir": "reverse",
       "color": "#000000",
       "from": 1,

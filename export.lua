@@ -122,6 +122,15 @@ local function export_cels(cels)
   return t
 end
 
+local function get_tileset_index(layer)
+  for i,tileset in ipairs(layer.sprite.tilesets) do
+    if layer.tileset == tileset then
+      return i-1
+    end
+  end
+  return -1
+end
+
 local function export_layer(layer, export_layers)
   local t = { name=layer.name }
   if layer.isImage then
@@ -133,6 +142,11 @@ local function export_layer(layer, export_layers)
     end
     if #layer.cels >= 1 then
       t.cels = export_cels(layer.cels)
+    end
+    if pcall(function() return layer.isTilemap end) then
+      if layer.isTilemap then
+        t.tileset = get_tileset_index(layer)
+      end
     end
   elseif layer.isGroup then
     t.layers = export_layers(layer.layers)
