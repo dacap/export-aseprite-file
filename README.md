@@ -26,7 +26,7 @@ map/
 
 An example of `map/sprite.json` content:
 
-```
+```json
 {
   "filename": "map.aseprite",
   "width": 32,
