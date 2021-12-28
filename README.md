@@ -148,6 +148,22 @@ An example of `map/sprite.json` content:
 }
 ```
 
+## Optional arguments
+
+```
+--output_dir=<path>
+```
+
+Sets the output directory. Default: `""`
+
+**Note** You should include a trailing slash.
+
+Example: 
+```
+aseprite -b map.aseprite --script-param output_dir=public/ --script export.lua 
+```
+
+
 ## Acknowledges
 
 This project uses [json.lua](https://github.com/rxi/json.lua) by
