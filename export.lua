@@ -9,6 +9,11 @@ if not spr then return print "No active sprite" end
 if ColorMode.TILEMAP == nil then ColorMode.TILEMAP = 4 end
 assert(ColorMode.TILEMAP == 4)
 
+local output_dir = "" 
+if app.params.output_dir ~= nil then 
+  output_dir = app.params.output_dir 
+end
+
 local fs = app.fs
 local pc = app.pixelColor
 local output_folder = fs.fileTitle(spr.filename)
