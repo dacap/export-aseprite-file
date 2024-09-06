@@ -3,7 +3,7 @@
 --
 -- This file is released under the terms of the MIT license.
 
-local spr = app.activeSprite
+local spr = app.sprite
 if not spr then return print "No active sprite" end
 
 if ColorMode.TILEMAP == nil then ColorMode.TILEMAP = 4 end
@@ -11,7 +11,7 @@ assert(ColorMode.TILEMAP == 4)
 
 local fs = app.fs
 local pc = app.pixelColor
-local output_folder = fs.fileTitle(spr.filename)
+local output_folder = fs.joinPath(app.fs.filePath(spr.filename), fs.fileTitle(spr.filename))
 local image_n = 0
 local tileset_n = 0
 
