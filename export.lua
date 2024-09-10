@@ -4,6 +4,7 @@
 -- This file is released under the terms of the MIT license.
 
 local spr = app.sprite
+if not spr then spr = app.activeSprite end -- just to support older versions of Aseprite
 if not spr then return print "No active sprite" end
 
 if ColorMode.TILEMAP == nil then ColorMode.TILEMAP = 4 end
